@@ -6,7 +6,7 @@ This project takes as an argument a .xml representation of source code and turns
 Note: Only works in a Unix/Linux environment
 # To Run:
 
-A Makefile is included with the project. To build the profiler, use the command: ```make profiler```
+A Makefile is included with the project. It can compile all profiler code, compile the p-simple program, compile the basic sort program, and compile p-sort code. To build the profiler, use the command: ```make profiler```
 
 From there, a new profiling source file, which will add functions to count line and function execution,  will need to be made. This is done using the srcML class, which is an .xml representation of a source code file. If there are multiple .cpp files, the first argument will need to be the file with the main function, and the rest will need to be added as aditional arguments. To do this, use the command: ```./profiler example1.cpp.xml example2.cpp.xml```
 
