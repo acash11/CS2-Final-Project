@@ -30,18 +30,18 @@ This project has 5 main files:
 - - Defines the profile class, one object wil be created for each definition file, and it includes functions to count the execution of lines, the counts of which are stored in a std::map, which uses the string representation of the line number as a key.
 - 5: main.cpp
 - - Takes in the srcML files as command line arguments, and outputs the p-***.cpp files that correlate to them. To simplify, at the beginning of each file, it inserts:
- ```
+ ```C++
     #include "profile.hpp"
     profile example1_cpp;
     
  ```
 - -  and then before every conditional statement, it inserts:
-```
+```C++
     profileName + ".conditionCount(__LINE__)" + " && "
 
 ```
 - - and after every other statement that ends with a semicolon, it inserts:
-```
+```C++
     " " + profileName + ".count(__LINE__);"
 ```
 
