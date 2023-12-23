@@ -26,21 +26,21 @@ This project has 5 main files:
 
 - 1 and 2: AST.cpp and AST.hpp
  - Defines the srcML class to represent the source code of a file, as well as the Abstract Sytax Tree within the srcML class that is used to hold the data itself.
- - 
+ -- 
 - 3 and 4:
- - Defines the profile class, one object wil be created for each definition file, and it includes functions to count the execution of lines, the counts of which are stored in a std::map, which uses the string representation of the line number as a key.
+ -- Defines the profile class, one object wil be created for each definition file, and it includes functions to count the execution of lines, the counts of which are stored in a std::map, which uses the string representation of the line number as a key.
 - 5: main.cpp
- - Takes in the srcML files as command line arguments, and outputs the p-***.cpp files that correlate to them. To simplify, at the beginning of each file, it inserts:
+ -- Takes in the srcML files as command line arguments, and outputs the p-***.cpp files that correlate to them. To simplify, at the beginning of each file, it inserts:
  ```C++
     #include "profile.hpp"
     profile example1_cpp;
  ```
- -  and then before every conditional statement, it inserts:
+ -- and then before every conditional statement, it inserts:
 ```C++
     profileName + ".conditionCount(__LINE__)" + " && "
 
 ```
- - and after every other statement that ends with a semicolon, it inserts:
+ -- and after every other statement that ends with a semicolon, it inserts:
 ```C++
     " " + profileName + ".count(__LINE__);"
 ```
