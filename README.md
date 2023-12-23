@@ -22,6 +22,8 @@ The output will categorized by source file, and will include the line, the funct
 
 Two programs and their .xml files are included with this project: simple.cpp, and sort.cpp, which includes header file sort_lib.h and definition file sort_lib.cpp
 
+# Project Information:
+
 This project has 5 main files:
 
 - 1 and 2: AST.cpp and AST.hpp
