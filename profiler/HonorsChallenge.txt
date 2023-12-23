@@ -1,0 +1,18 @@
+//Explanation for honors challenge:
+//From discrete mathmatics, any boolean x && true is simply equal to x.
+//You could not simply put the line count in the loop, as the amount of loops is not equal to the amount of times the conditional statement is run.
+//Instead, I created a boolean function conditionalCount in profile.hpp that does that same thing as void count, except this returns true.
+//By inserting " && " + profileName + ".conditionCount(__Line__)" after every conditional statement, I effectively call the count function within the conditional statement without changing it.
+
+//For example, in p-simple.cpp:
+
+int search(int tbl[], int n, int key) { simple_cpp.count(__LINE__, "search");
+
+    int result = -1;
+    for (int i = 0; i < n && simple_cpp.conditionCount(__LINE__); ++i) {
+        if (key == tbl[i] && simple_cpp.conditionCount(__LINE__)) {
+            result = i; simple_cpp.count(__LINE__);
+        }
+    }
+    return result;
+}
