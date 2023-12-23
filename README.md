@@ -34,7 +34,6 @@ This project has 5 main files:
  ```C++
     #include "profile.hpp"
     profile example1_cpp;
-    
  ```
  -  and then before every conditional statement, it inserts:
 ```C++
@@ -45,6 +44,8 @@ This project has 5 main files:
 ```C++
     " " + profileName + ".count(__LINE__);"
 ```
+
+As mentioned before, this all results in the creation of another program, which will run the original code as well as the profiling functions.
 
 
 
