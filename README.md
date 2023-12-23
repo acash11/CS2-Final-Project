@@ -1,7 +1,7 @@
 # CS2-Final-Project
 Code Profiler to Count Function and Line Execution Amounts
 
-This project takes as an argument an .xml representation of source code and turns it into a version that includes profiling information at the end.
+This project takes as an argument a .xml representation of source code and turns it into a version that includes profiling information at the end.
 
 Note: Only works in a Unix/Linux environment
 # To Run:
