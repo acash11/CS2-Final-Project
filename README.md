@@ -8,11 +8,11 @@ Note: Only works in a Unix/Linux environment
 
 A Makefile is included with the project. To build the profiler, use the command: ```make profiler```
 
-From there, a new profiling source file, which will add functions to count line and function execution,  will need to be made. This is done using the srcML class, which is an .xml representation of a source code file. If there are multiple .cpp files, the first argument will need to be the file with the main function, and the rest will need to be added as adiitonal arguments. To do this, use the command: ```./profiler example1.cpp.xml example2.cpp.xml```
+From there, a new profiling source file, which will add functions to count line and function execution,  will need to be made. This is done using the srcML class, which is an .xml representation of a source code file. If there are multiple .cpp files, the first argument will need to be the file with the main function, and the rest will need to be added as aditional arguments. To do this, use the command: ```./profiler example1.cpp.xml example2.cpp.xml```
 
 This will create a new file or files of the format: ```p-example1.cpp``` and ```p-example2.cpp```
 
-From here, use the Makefile to compile and run, with the command: ```make p-example1```
+From here, use the Makefile to compile, with the command: ```make p-example1```
 
 This will create an executable with the format: ```p-example1```
 
@@ -26,8 +26,8 @@ This project has 5 main files:
 
 - 1 and 2: AST.cpp and AST.hpp
   - Defines the srcML class to represent the source code of a file, as well as the Abstract Sytax Tree within the srcML class that is used to hold the data itself.
-- 3 and 4:
-  - Defines the profile class, one object wil be created for each definition file, and it includes functions to count the execution of lines, the counts of which are stored in a std::map, which uses the string representation of the line number as a key.
+- 3 and 4: profile.cpp and profile.hpp
+  - Defines the profile class, one object of which will be created for each definition file, and it includes functions to count the execution of lines, the counts of which are stored in a std::map, which uses the string representation of the line number as a key.
 - 5: main.cpp
   - Takes in the srcML files as command line arguments, and outputs the p-***.cpp files that correlate to them. To simplify, at the beginning of each file, it inserts:
  ```C++
